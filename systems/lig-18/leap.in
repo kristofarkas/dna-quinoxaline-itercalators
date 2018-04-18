@@ -1,0 +1,23 @@
+source leaprc.DNA.bsc1
+source leaprc.gaff2
+source leaprc.water.TIP4PEW
+
+intercalator = loadmol2 lig-18.mol2
+loadamberparams lig-18.frcmod
+
+dna = loadpdb ../1Z3F.pdb
+
+saveamberparm dna dna.prmtop dna.inpcrd
+saveamberparm intercalator intercalator.prmtop intercalator.inpcrd
+
+complex = combine {dna intercalator}
+
+saveamberparm complex complex-dry.prmtop complex-dry.inpcrd
+
+solvateBox complex TIP4PEWBOX 14.0 iso
+
+addIonsRand complex Na+ 0
+
+saveamberparm complex complex.prmtop complex.inpcrd
+
+quit
