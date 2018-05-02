@@ -14,8 +14,8 @@ ts = 0.002*u.picoseconds
 sstep = 100
 nstep = 1000000
 
-prmtop = app.AmberPrmtopFile('complex.prmtop')
-inpcrd = app.AmberInpcrdFile('complex.inpcrd')
+prmtop = app.AmberPrmtopFile('../complex.prmtop')
+inpcrd = app.AmberInpcrdFile('../complex.inpcrd')
 
 system = prmtop.createSystem(nonbondedMethod=app.PME, 
                              nonbondedCutoff=10*u.angstrom, 

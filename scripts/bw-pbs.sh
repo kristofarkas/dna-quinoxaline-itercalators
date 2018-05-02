@@ -1,7 +1,7 @@
 #!/bin/bash
 
-#PBS -l nodes=20:ppn=16:xk
-#PBS -l walltime=06:00:00
+#PBS -l nodes=500:ppn=16:xk
+#PBS -l walltime=04:00:00
 
 cd $PBS_O_WORKDIR
 cd ../systems
@@ -16,8 +16,14 @@ export OPENMM_CUDA_COMPILER=/opt/nvidia/cudatoolkit7.5/7.5.18-1.0502.10743.2.1/b
 for i in $(seq -f "%02g" 1 20)
 do
     cd lig-$i
-    cp ../../scripts/simulate.py .
-    aprun -n1 python simulate.py &
+    for j in $(seq -f "%02g" 1 25)
+    do
+      mkdir rep-$j
+      cd rep-$j
+      cp ../../../scripts/simulate.py .
+      aprun -n1 python simulate.py &
+      cd ../
+    done
     cd ../
 done
 
