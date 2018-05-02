@@ -9,12 +9,14 @@
 cd $MEMBERWORK/chm126/dna-quinoxaline-itercalators/systems
 
 module load cudatoolkit
+module load python wraprun
 
-export PATH=/ccs/proj/chm126/farkaspall/miniconda3/bin:$PATH
-export LD_LIBRARY_PATH=/ccs/proj/chm126/farkaspall/miniconda3/lib:$LD_LIBRARY_PATH
-export OPENMM_CUDA_COMPILER=/opt/nvidia/cudatoolkit7.5/7.5.18-1.0502.10743.2.1/bin/nvcc
+export OPENMM_PYTHON="/ccs/proj/chm126/farkaspall/miniconda2/bin/python"
+export OPENMM_CUDA_COMPILER=`which nvcc`
 
 date
+
+DNADIRS=""
 
 for i in $(seq -f "%02g" 1 20)
 do
@@ -24,12 +26,14 @@ do
       mkdir rep-$j
       cd rep-$j
       cp ../../../scripts/simulate.py .
-      aprun -n1 python simulate.py &
+      DNADIRS="$DNADIRS,lig-$i/rep-$j"
       cd ../
     done
     cd ../
 done
 
-wait
+DNADIRS=${DNADIRS#","}
+
+wraprun -n 1 serial --w-cd $DNADIRS $OPENMM_PYTHON simulate.py
 
 date
