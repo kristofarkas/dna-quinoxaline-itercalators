@@ -1,0 +1,7 @@
+&general  
+  startframe=1025, interval=40, keep_files=0,
+/
+&pb
+  radiopt=0,
+/
+
