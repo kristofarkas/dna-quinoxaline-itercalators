@@ -7,7 +7,10 @@ ligands = [lig.strip() for lig in open('ligands.dat').readlines()]
 align_to = next(Chem.ForwardSDMolSupplier('el.sdf'))
 
 for index, ligand in enumerate(ligands):
-
+    
+    if index not in [0, 1, 2]:
+        continue
+    
     alignee = Chem.MolFromSmiles(ligand)
     alignee = Chem.AddHs(alignee)
     id = AllChem.EmbedMultipleConfs(alignee, numConfs=1)[0]

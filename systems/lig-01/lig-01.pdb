@@ -38,4 +38,25 @@ HETATM   37  H15 UNL     1      -2.764  22.936  44.348  1.00  0.00           H
 HETATM   38  H16 UNL     1      -1.692  23.580  46.524  1.00  0.00           H  
 HETATM   39  H17 UNL     1       0.117  23.538  46.632  1.00  0.00           H  
 HETATM   40  H18 UNL     1      -0.673  24.730  45.563  1.00  0.00           H  
+CONECT    1    2    2    6    9
+CONECT    2    3   23
+CONECT    3    4    4   24
+CONECT    4    5   25
+CONECT    5    6    6   26
+CONECT    6    7
+CONECT    7    8   18
+CONECT    8    9    9   13
+CONECT    9   10
+CONECT   10   11   11
+CONECT   11   12   17
+CONECT   12   13   13   14
+CONECT   14   15   15   27
+CONECT   15   16   28
+CONECT   16   17   17   29
+CONECT   17   30
+CONECT   18   19   31   32
+CONECT   19   20   33   34
+CONECT   20   21   22
+CONECT   21   35   36   37
+CONECT   22   38   39   40
 END
