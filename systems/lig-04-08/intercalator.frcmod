@@ -1,0 +1,26 @@
+Created by ParmEd
+MASS
+
+BOND
+
+ANGLE
+ca-cq-cp     66.121  121.110
+ca-cp-cq     66.121  121.110
+
+DIHE
+cp-cq-nb-ca    1     0.49500000    0.000   3.0    SCEE=1.2 SCNB=2.0
+ca-cp-cq-ca    1     0.79500000  180.000   2.0    SCEE=1.2 SCNB=2.0
+ca-cp-cq-nb    1     1.00000000  180.000   2.0    SCEE=1.2 SCNB=2.0
+ca-cq-nb-ca    1     0.49500000    0.000   3.0    SCEE=1.2 SCNB=2.0
+
+IMPROPER
+ca-ca-cp-cq     1.10000000  180.000   2.0
+ca-cp-ca-ha     1.10000000  180.000   2.0
+ca-ca-ca-ha     1.10000000  180.000   2.0
+ca-cp-ca-na     1.10000000  180.000   2.0
+cq-na-ca-nb     1.10000000  180.000   2.0
+ca-cp-cq-nb     1.10000000  180.000   2.0
+ca-ca-ca-nb     1.10000000  180.000   2.0
+
+NONB
+

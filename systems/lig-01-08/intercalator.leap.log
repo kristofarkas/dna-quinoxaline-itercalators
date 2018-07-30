@@ -1,4 +1,4 @@
-log started: Thu Jul 26 13:32:14 2018
+log started: Mon Jul 30 18:49:44 2018
 
 Log file: ./leap.log
 >> # ----- NOTE: this is designed for PDB format 3!
@@ -191,7 +191,7 @@ Parmbsc1 force-field for DNA
 ----- Source: /Users/kristofarkas/anaconda3/bin/../dat/leap/cmd/leaprc.gaff2
 ----- Source of /Users/kristofarkas/anaconda3/bin/../dat/leap/cmd/leaprc.gaff2 done
 >> logFile leap.log
-log started: Thu Jul 26 13:32:14 2018
+log started: Mon Jul 30 18:49:44 2018
 
 Log file: ./leap.log
 >> #
@@ -520,9 +520,9 @@ Joining DC - DG3
   Sequence: 2-indolo[3,2-b]quinoxalin-6-yl-
   Sequence: default_name
 > solvateBox intercalator TIP3PBOX 11.5 iso
-  Solute vdw bounding box:              13.351 16.951 6.409
-  Total bounding box for atom centers:  39.951 39.951 39.951
-      (box expansion for 'iso' is  49.3%)
+  Solute vdw bounding box:              13.146 6.840 15.613
+  Total bounding box for atom centers:  38.613 38.613 38.613
+      (box expansion for 'iso' is  38.2%)
   Solvent unit box:                     18.774 18.774 18.774
 The number of boxes:  x= 3  y= 3  z= 3
 Adding box at: x=0  y=0  z=0
@@ -579,17 +579,17 @@ Adding box at: x=2  y=2  z=1
 Center of solvent box is: -18.774349, -18.774349, 0.000000
 Adding box at: x=2  y=2  z=2
 Center of solvent box is: -18.774349, -18.774349, -18.774349
-  Volume: 80639.641 A^3 
-  Total mass 34241.586 amu,  Density 0.705 g/cc
-  Added 1879 residues.
+  Volume: 72524.514 A^3 
+  Total mass 31322.002 amu,  Density 0.717 g/cc
+  Added 1717 residues.
 > addIons2 intercalator Na+ 0
- 0.233420 0 1 0
+ 0.226730 0 1 0
 0 Na+ ion required to neutralize.
 Adding 0 counter ions to "intercalator" using 1A grid
 > saveAmberParm intercalator molo3.prmtop molo4.inpcrd
 Checking Unit.
-ERROR: The unperturbed charge of the unit: -0.233420 is not integral.
-WARNING: The unperturbed charge of the unit: -0.233420 is not zero.
+ERROR: The unperturbed charge of the unit: -0.226730 is not integral.
+WARNING: The unperturbed charge of the unit: -0.226730 is not zero.
 
  -- ignoring the error and warning.
 
@@ -610,16 +610,16 @@ Marking per-residue atom chain types.
 	res	total affected
 
 	<0>	1
-	WAT	1879
+	WAT	1717
   )
  (no restraints)
 > savePDB intercalator molo5.pdb
 Writing pdb file: molo5.pdb
    printing CRYST1 record to PDB file with box info
 > solvateBox complex TIP3PBOX 11.5 iso
-  Solute vdw bounding box:              23.211 23.240 31.118
-  Total bounding box for atom centers:  54.118 54.118 54.118
-      (box expansion for 'iso' is  37.1%)
+  Solute vdw bounding box:              22.876 23.601 31.124
+  Total bounding box for atom centers:  54.124 54.124 54.124
+      (box expansion for 'iso' is  37.0%)
   Solvent unit box:                     18.774 18.774 18.774
 The number of boxes:  x= 3  y= 3  z= 3
 Adding box at: x=0  y=0  z=0
@@ -677,8 +677,8 @@ Center of solvent box is: -18.774349, -18.774349, 0.000000
 Adding box at: x=2  y=2  z=2
 Center of solvent box is: -18.774349, -18.774349, -18.774349
   Volume: 187260.282 A^3 
-  Total mass 87684.190 amu,  Density 0.778 g/cc
-  Added 4647 residues.
+  Total mass 87773.278 amu,  Density 0.778 g/cc
+  Added 4652 residues.
 > addIons2 complex Na+ 0
 10 Na+ ions required to neutralize.
 Adding 10 counter ions to "complex" using 1A grid
@@ -691,25 +691,25 @@ Box:
 Resolution:      1.00 Angstrom.
 Tree depth: 7
 grid build: 1 sec
-Volume =  5.21% of box, grid points 109363
+Volume =  5.21% of box, grid points 109355
 Calculating grid charges
-charges: 31 sec
-Placed Na+ in complex at (8.50, -7.45, 6.53).
-Placed Na+ in complex at (-5.50, -7.45, -1.47).
-Placed Na+ in complex at (-9.50, 3.55, 2.53).
-Placed Na+ in complex at (8.50, -9.45, -0.47).
-Placed Na+ in complex at (3.50, -1.45, -9.47).
-Placed Na+ in complex at (0.50, -6.45, 10.53).
-Placed Na+ in complex at (-9.50, -2.45, -6.47).
-Placed Na+ in complex at (7.50, 9.55, -5.47).
+charges: 30 sec
+Placed Na+ in complex at (2.50, 9.55, -3.47).
+Placed Na+ in complex at (4.50, -0.45, 2.53).
+Placed Na+ in complex at (-5.50, 3.55, -5.47).
+Placed Na+ in complex at (-5.50, -10.45, -1.47).
+Placed Na+ in complex at (0.50, -4.45, 9.53).
+Placed Na+ in complex at (-8.50, 0.55, 4.53).
+Placed Na+ in complex at (3.50, -2.45, -8.47).
 Placed Na+ in complex at (27.50, 23.55, -7.47).
 Placed Na+ in complex at (-2.50, 19.55, 29.53).
+Placed Na+ in complex at (16.50, 0.55, 29.53).
 
 Done adding ions.
 > saveAmberParm complex molo6.prmtop molo7.inpcrd
 Checking Unit.
-ERROR: The unperturbed charge of the unit: -0.233420 is not integral.
-WARNING: The unperturbed charge of the unit: -0.233420 is not zero.
+ERROR: The unperturbed charge of the unit: -0.226730 is not integral.
+WARNING: The unperturbed charge of the unit: -0.226730 is not zero.
 
  -- ignoring the error and warning.
 
@@ -754,7 +754,7 @@ Marking per-residue atom chain types.
 	res	total affected
 
 	<0>	1
-	WAT	4647
+	WAT	4652
   )
  (no restraints)
 > savePDB complex molo8.pdb
